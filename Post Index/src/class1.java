@@ -1,12 +1,19 @@
 public class class1 {
 	public static void main (String [] args){
 		index adress = new index();
-		System.out.println("Почтовый адрес вашей организации: " + adress.postIndex + ", " + adress.city + ", " + adress.street + ", " + adress.houseNum);
+		adress.city = "г.Георгиевск";
+		adress.street = "ул.Быкова";
+		adress.postIndex = 358131;
+		adress.houseNum = 13;
+		adress.displayInfo();
 	}
 }
 class index {
-	int postIndex = 358312;
-	int houseNum = 14;
-	String city = "г.Георгиевск";
-	String street = "ул.Быкова";
+	int postIndex;
+	int houseNum;
+	String city;
+	String street;
+	void displayInfo() {
+		System.out.println("Почтовый адрес вашей организации: " + postIndex + ", " + city + ", " + street + ", " + houseNum);
+	}
 }
